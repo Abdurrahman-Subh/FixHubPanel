@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <link rel="icon" href="/images/logo fixhub new.jpg" type="image/gif" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>FixHub</title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome style -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="/css/responsive.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="sub_page">
+    <!-- header section strats -->
+    <%- include('partials/_header') -%>
+    <!-- end header section -->
+
+    <!-- service section -->
+
+    <section class="service_section layout_padding">
+      <div class="service_container">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h2>Our <span>Services</span></h2>
+            <br />
+          </div>
+          <div class="row">
+            <div class="col-md-12 acc">
+              <div class="box">
+                <div class="img-box">
+                  <img src="/imagesFix/cover.jpg" alt="" />
+                  <img src="/imagesFix/access2.jpg" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Accessories</h5>
+                  <p>
+                    Protect: To protect your smartphone, we offer a wide range
+                    of mobile phone accessories for iPhones, Samsung handsets
+                    including all the latest protective cases which help prevent
+                    against drops, scratches, heat and dust.
+                  </p>
+                  <p>
+                    Charge: Our range also includes mains, car and travel
+                    chargers. Plus a practical range of screen protector, power
+                    banks and mini speakers. Plus, if we have repaired your
+                    mobile phone, we'll give you a discount on our range of
+                    accessories.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box">
+                <div class="img-box">
+                  <img src="/images/s2.png" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Hardware Replacement</h5>
+                  <p>
+                    fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of
+                    using
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box">
+                <div class="img-box">
+                  <img src="/images/s3.png" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Data Recovery</h5>
+                  <p>
+                    fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of
+                    using
+                  </p>
+                </div>
+                <a href="/data"> Read More </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box">
+                <div class="img-box">
+                  <img src="/images/s4.png" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Software Update</h5>
+                  <p>
+                    Breakdown or frequent bugs Frequent bugs or software viruses
+                    can cause your mobile to run slowly or switch off
+                    completely. We can update your software or help you back up
+                    your data . Optimizing your device We can also carry out
+                    updates to help improve your user experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end service section -->
+
+    <!-- header section strats -->
+    <%- include('partials/_footer') -%>
+    <!-- end header section -->
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <script>
+      myInterval = setInterval(setText, 4000);
+
+      function setText() {
+        let x = document.querySelector("#online");
+        x.innerHTML = x.innerHTML == "CALL US" ? "+20 100 588 5855" : "CALL US";
+      }
+    </script>
+  </body>
+</html>

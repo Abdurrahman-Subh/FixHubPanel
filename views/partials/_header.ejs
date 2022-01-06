@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="top_nav_container">
+            <a class="navbar-brand d-none d-lg-flex desk" href="/">
+              <span>
+                <img style="width: 100px" src="/imagesFix/fav.png" alt=""
+              /></span>
+            </a>
+            <div class="contact_nav">
+              <nav class="navbar navbar-expand-lg custom_nav-container">
+                <a class="navbar-brand d-none d-lg-flex mobile" href="/">
+                  <span>
+                    <img style="width: 100px" src="/imagesFix/fav.png" alt=""
+                  /></span>
+                </a>
+
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class=""> </span>
+                </button>
+
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <% if(!userIN){ %>
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/service">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/sell">Sell Your Device</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="/deals">Deals&Offers</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/posts">News&Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/about"> About</a>
+                    </li>
+                    <a class="hover-book" href="tel:+20 100 588 5855">
+                      <li id="online" class="nav-item book">CALL US</li></a
+                    >
+                  </ul>
+                  <% } %> <% if(userIN){ %>
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/service">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/sell">Sell Your Device</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="/deals">Deals&Offers</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/posts">News&Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/about"> About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/add">Create Post</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/addSlider">Create Slider</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/users/logout">Log Out</a>
+                    </li>
+                    <a class="hover-book" href="tel:+20 100 588 5855">
+                      <li id="online" class="nav-item book">CALL US</li></a
+                    >
+                  </ul>
+                  <% } %>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

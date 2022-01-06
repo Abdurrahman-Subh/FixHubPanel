@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <link rel="icon" href="/imagesFix/fav.png" type="image/gif" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>FixHub</title>
+
+    <!-- slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <!-- font awesome style -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="/css/responsive.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="hero_area">
+      <!-- header section strats -->
+      <%- include('partials/_header') -%>
+      <!-- end header section -->
+      <!-- slider section -->
+
+      <section class="slider_section">
+        <div class="slider-bg">
+          <% for (let i = 0; i< sliders.length; i++) { %>
+          <img src="<%= sliders[i].image %>" alt="" />
+        </div>
+
+        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 resSlider">
+                    <div class="detail-box">
+                      <h1><%= sliders[i].title %></h1>
+                      <div><%- sliders[i].sanitizedHtml %></div>
+                      <a href="#devices"> Book Now </a>
+                      <% if(userIN){ %>
+                      <div class="btnBlog">
+                        <a href="/sliders">Go to Slider</a>
+                      </div>
+
+                      <% } %> <% } %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end slider section -->
+    </div>
+
+    <!-- service section -->
+
+    <section id="services" class="service_section layout_padding">
+      <div class="service_container">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h2>Our <span>Services</span></h2>
+            <br />
+          </div>
+          <div class="row">
+            <div class="col-md-12 acc">
+              <div class="box">
+                <div class="img-box">
+                  <img src="/imagesFix/cover.jpg" alt="" />
+                  <br />
+                  <img src="/imagesFix/access2.jpg" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Accessories</h5>
+                  <p>
+                    Protect: To protect your smartphone, we offer a wide range
+                    of mobile phone accessories for iPhones, Samsung handsets
+                    including all the latest protective cases which help prevent
+                    against drops, scratches, heat and dust.
+                  </p>
+                  <p>
+                    Charge: Our range also includes mains, car and travel
+                    chargers. Plus a practical range of screen protector, power
+                    banks and mini speakers. Plus, if we have repaired your
+                    mobile phone, we'll give you a discount on our range of
+                    accessories.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box">
+                <div class="img-box">
+                  <img src="/images/s2.png" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Hardware Replacement</h5>
+                  <p>
+                    fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of
+                    using
+                  </p>
+                  <a href="/service"> Read More </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box">
+                <div class="img-box">
+                  <img src="/images/s3.png" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Data Recovery</h5>
+                  <p>
+                    fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of
+                    using
+                  </p>
+                  <a href="/data"> Read More </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box">
+                <div class="img-box">
+                  <img src="/images/s4.png" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Software Update</h5>
+                  <p>
+                    Breakdown or frequent bugs Frequent bugs or software viruses
+                    can cause your mobile to run slowly or switch off
+                    completely...
+                  </p>
+                  <a href="/service"> Read More </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-box">
+            <a href="/service"> See All </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end service section -->
+
+    <!-- why us section -->
+
+    <section class="why_us_section layout_padding">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2>Why <span>Choose</span> Us</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="box">
+              <div class="img-box">
+                <i class="fas fa-biking fa-4x"></i>
+              </div>
+              <div class="detail-box">
+                <h5>Home Pickup&Delivery</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="box">
+              <div class="img-box">
+                <i class="fas fa-cogs fa-4x"></i>
+              </div>
+              <div class="detail-box">
+                <h5>Original Genuine Parts</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="box">
+              <div class="img-box">
+                <i class="fas fa-tools fa-4x"></i>
+              </div>
+              <div class="detail-box">
+                <h5>Quick Repair Process</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="box">
+              <div class="img-box">
+                <img src="/images/w3.png" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>Low Price Guarantee</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end why us section -->
+    <!--Start of Devices-->
+    <div id="devices" class="device">
+      <div style="padding: 20px" class="heading_container heading_center">
+        <h2>Choose Your <span>Device</span></h2>
+      </div>
+      <div class="main-container">
+        <form action="/" method="POST">
+          <div class="formContainer">
+            <div class="container-input select">
+              <select name="device" id="device">
+                <option value="" selected="selected">Select Device</option>
+              </select>
+            </div>
+
+            <div class="container-input select">
+              <select name="model" id="model">
+                <option value="" selected="selected">Select Model</option>
+              </select>
+            </div>
+
+            <div class="container-input select">
+              <select name="problem" id="problem">
+                <option value="" selected="selected">Select Problem</option>
+              </select>
+            </div>
+
+            <div id="container-input-radio" class="container-input">
+              <input
+                type="text"
+                name="address"
+                placeholder="Enter Your Address"
+                class="deviceInput"
+                required
+              />
+              <!-- <label id="label-radio-1" class="label-input" for="address"
+                >Address</label
+              > -->
+            </div>
+            <div id="container-input-radio" class="container-input">
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter Your Name"
+                class="deviceInput"
+                required
+              />
+              <!-- <label id="label-radio-1" class="label-input" for="name"
+                >Name</label
+              > -->
+            </div>
+            <div id="container-input-radio" class="container-input">
+              <input
+                type="text"
+                name="number"
+                placeholder="Phone Number"
+                class="deviceInput"
+                required
+              />
+              <!-- <label id="label-radio-1" class="label-input" for="name"
+                >Phone Number</label
+              > -->
+            </div>
+            <div class="btn-box">
+              <input class="submitBtn" type="submit" value="Submit" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--End of Device-->
+
+    <!-- client section -->
+
+    <!--Testomonials Start-->
+    <div class="testo">
+      <div style="margin-bottom: 20px" class="heading_container heading_center">
+        <h2>What Our <span>Customers</span>Say</h2>
+      </div>
+      <section class="testim" id="testim">
+        <div class="wrap">
+          <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+          <span id="left-arrow" class="arrow left fa fa-chevron-left"></span>
+
+          <ul class="dots" id="testim-dots">
+            <li class="dot active"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+          </ul>
+
+          <div class="cont" id="testim-content">
+            <div class="active">
+              <h2>Information Geemi</h2>
+              <p>
+                تجربتي مع المكان اني تعبت من كتر مافقدت الامل في الجهاز بتاعي
+                الايفون x وكل ماروح بيه مكان حد يقولي مفيش امل والتليفون بيودع
+                ومش عارف اي لحد مالقيت مكان اسمه fix hub السراج مول الدور التاني
+                مكرم عبيد ناس محترمه جدا متخصصون ف صيانه الايفون بجد ناس محترمه
+                التليفون استلمته ف اقل من ساعه لقيته البشمهندس عمر بيقولي جرب
+                مصدقتش نفسي البسمه رجعتلي تاني عشان بس التليفون هديه وغالي عليا
+                جدا هتروحوا المكان بجد مش هتندموا مع fix hub اطمن وهتلاقي اللي
+                مش موجود
+              </p>
+            </div>
+            <div>
+              <h2>be beauty for yourself</h2>
+              <p>
+                خدمة ممتازة و سريعه و تصليح قدامك بلس الامانة و عدم الاشتغال زى
+                محلات برا كتيرر مرتين كنت اصلاح مشكلة الشبكة برا و يرجع يبوظ
+                بعدها بيومين و لم روحت هما اللى حلوها في الايفون7 و قاعد سنتين
+                لغاية ما بعتها و تانى مره اروح في الفون الجديدة مشكلة face id و
+                برود حلوها بسرعه انصح اى حد عندها عطل في الايفون يروح هناك
+              </p>
+            </div>
+            <div>
+              <h2>Jumana Ahmed</h2>
+              <p>
+                مساحة الايفون كانت تعباني جداا كانت 16 جيجا و كبروها ل128 في اقل
+                من نص ساعه حقيقي اللي شاغلين هناك محترمين جدا و خدمة ممتازه و
+                سعرهم اقل من برا بكتيرر
+              </p>
+            </div>
+            <div>
+              <h2>Mohamed Mousa</h2>
+              <p>
+                Excellent team good engineers they fix my Iphone very fast and
+                In front of you.<br />
+                The best place for maintaining your Apple devices
+              </p>
+            </div>
+
+            <div>
+              <h2>Maryam Hesham</h2>
+              <p>Good quality and price and service too for iphone really</p>
+            </div>
+
+            <div>
+              <h2>Mostafa Elsayed</h2>
+              <p>
+                professional service in iPhone maintenance Thanks fixhub team
+                and owner
+              </p>
+            </div>
+
+            <div>
+              <h2>Mina Safwat</h2>
+              <p>
+                Positive: Professionalism, Quality, Responsiveness, Value<br />
+                best iPhone service thx 🤩
+              </p>
+            </div>
+
+            <div>
+              <h2>Mohamed Rakha</h2>
+              <p>
+                Positive: Professionalism, Quality<br />
+                one of the best iPhone techs in Egypt really perfect work and
+                very affordable pricing
+              </p>
+            </div>
+            <div>
+              <h2>Mohamed Atta</h2>
+              <p>
+                I fixed my Samsung Note 8 there Maintenance quality is
+                excellent. Price is cheaper than all the others. Thank you Omar,
+                thank you Mohannad
+              </p>
+            </div>
+            <div>
+              <h2>Kareem Helmee</h2>
+              <p>
+                رحت بموبايل سامسونج نوت ١٠، و كان دخل جواه مياه، و كنت معتقد ان
+                مفيهوش امل، لكن بكل ذوق و احترام الناس في المكان صلحوهولي و انا
+                واقف في حوال نص ساعة، و بسعر معقول جدا، دا غير ان تعاملهم ممتاز.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--Testomonials End-->
+
+    <!-- end client section -->
+
+    <!--Start of How it Works-->
+    <div class="works">
+      <div class="workDiv1"><h1>How it works?</h1></div>
+      <div class="workDiv2">
+        <div class="workIcon">
+          <img src="/imagesFix/phona.png" alt="" />
+        </div>
+        <p class="workP">Book Us</p>
+        <p class="workP2">
+          You can book an FixHub through our website or by calling us on:<br />
+          +20 100 588 5855.
+        </p>
+      </div>
+      <div class="workDiv3">
+        <div class="workIcon">
+          <i style="color: #e43820" class="fas fa-bicycle fa-4x"></i>
+        </div>
+        <p class="workP">We Come To You</p>
+        <p class="workP2">
+          There's no need to stop what you're doing to have your iPhone repaired
+          - we'll meet you at your house, office or a nearby café.
+        </p>
+      </div>
+      <div class="workDiv4">
+        <div class="workIcon">
+          <i style="color: #e43820" class="fas fa-user-shield fa-4x"></i>
+        </div>
+        <p class="workP">6 Months Warranty</p>
+        <p class="workP2">
+          It's a risk-free experience; your repair is backed by the FixHub 6
+          month Warranty system.
+        </p>
+      </div>
+    </div>
+    <!--End of How it Works-->
+
+    <!--Start of NewsLetter-->
+    <div class="newsletter">
+      <section id="newsletter">
+        <div class="picture"></div>
+        <article class="welcome">
+          <h2>don't miss our letters</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa,
+            beatae.
+          </p>
+          <form action="/news" method="POST">
+            <input
+              type="email"
+              name="news"
+              id=""
+              placeholder="enter your email ..."
+            />
+            <input type="submit" value="join us" />
+          </form>
+        </article>
+      </section>
+    </div>
+    <!--End of NewsLetter-->
+
+    <!-- footer section -->
+    <%- include('partials/_footer') -%>
+    <!-- footer section -->
+    <!-- jQuery -->
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/owl.js"></script>
+
+    <!-- custom js -->
+    <script src="/js/custom.js"></script>
+    <script src="/js/dynamic.js"></script>
+
+    <script>
+      myInterval = setInterval(setText, 4000);
+
+      function setText() {
+        let x = document.querySelector("#online");
+        x.innerHTML = x.innerHTML == "CALL US" ? "+20 100 588 5855" : "CALL US";
+      }
+    </script>
+  </body>
+</html>

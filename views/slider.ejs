@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <link rel="icon" href="/images/logo fixhub new.jpg" type="image/gif" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>FixHub</title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome style -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/layout.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="/css/responsive.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+	<link rel="stylesheet" href="/css/post.scss">
+    
+  </head>
+
+  <body class="sub_page">
+
+<%- include('partials/_header'); %>
+
+	
+<article class="hentry">
+
+	<div class="featured-image">
+	  <img src="<%= slider.image %>" alt="">
+	</div>
+	 <h1 class="entry-title"> <%= slider.title %>  </h1>
+	
+
+  </article>
+
+	<%- include('partials/_footer'); %></div>
+	<script src="/js/jquery-3.4.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="/js/bootstrap.js"></script>
+    <!-- custom js -->
+    <script src="/js/custom.js"></script>
+    
+  </body>
+</html>

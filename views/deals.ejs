@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <link rel="icon" href="/imagesFix/fav.png" type="image/gif" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/deals.css" />
+    <title>FixHub</title>
+
+    <!-- slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <!-- font awesome style -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/layout.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="/css/responsive.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- header section strats -->
+    <%- include('partials/_header') -%>
+    <!-- end header section -->
+    <div class="page">
+      <div class="countdown-col col">
+        <div class="time middle">
+          <span
+            ><div id="days">12</div>
+            Days</span
+          >
+          <span
+            ><div id="hours">06</div>
+            Hours</span
+          >
+          <span
+            ><div id="minutes">35</div>
+            Minutes</span
+          >
+          <span
+            ><div id="seconds">54</div>
+            Seconds</span
+          >
+        </div>
+      </div>
+      <div class="newsletter-col col">
+        <div class="newslatter middle">
+          <h2>We Will Coming Soon</h2>
+          <h4>Subscribe to get notification when we start</h4>
+          <form action="newsletter.php" method="POST">
+            <input type="text" name="news" placeholder="Enter Your Email" />
+            <input
+              type="submit"
+              value="Subscribe Now"
+              class="newslatter-button"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- footer section -->
+    <%- include('partials/_footer') -%>
+    <!-- footer section -->
+    <!-- jQuery -->
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="/js/bootstrap.js"></script>
+    <script>
+      myInterval = setInterval(setText, 4000);
+
+      function setText() {
+        let x = document.querySelector("#online");
+        x.innerHTML = x.innerHTML == "CALL US" ? "+20 100 588 5855" : "CALL US";
+      }
+    </script>
+    <script>
+      let comingDate = new Date("Feb 8, 2022 13:12:00");
+
+      let d = document.getElementById("days");
+      let h = document.getElementById("hours");
+      let m = document.getElementById("minutes");
+      let s = document.getElementById("seconds");
+
+      let x = setInterval(function () {
+        let now = new Date();
+        let selisih = comingDate.getTime() - now.getTime();
+
+        let days = Math.floor(selisih / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(
+          (selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        let minutes = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((selisih % (1000 * 60)) / 1000);
+
+        d.innerHTML = getTrueNumber(days);
+        h.innerHTML = getTrueNumber(hours);
+        m.innerHTML = getTrueNumber(minutes);
+        s.innerHTML = getTrueNumber(seconds);
+
+        if (selisih < 0) {
+          clearInterval(x);
+          d.innerHTML = "00";
+          h.innerHTML = "00";
+          m.innerHTML = "00";
+          s.innerHTML = "00";
+        }
+      }, 1000);
+
+      function getTrueNumber(x) {
+        if (x < 10) return "0" + x;
+        else return x;
+      }
+    </script>
+  </body>
+</html>

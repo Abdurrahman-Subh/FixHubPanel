@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <link rel="icon" href="/images/logo fixhub new.jpg" type="image/gif" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>FixHub</title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome style -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/layout.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="/css/responsive.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="sub_page">
+    <!--Page Loader-->
+    <!-- header section Start -->
+    <%- include('partials/_header'); %>
+    <!-- end header section -->
+
+    <!-- about section -->
+    <div class="welcomeH1">
+      <h1>Latest News</h1>
+    </div>
+    <div class="containerBlog">
+      <% for (let i = 0; i< posts.length; i++) { %>
+      <div class="cardBlog">
+        <div class="imgBlog">
+          <img src="<%= posts[i].image %>" alt="photo" />
+        </div>
+        <div class="contentBlogH1">
+          <h4><%= posts[i].title %></h4>
+        </div>
+        <div class="contentBlogP">
+          <p><%= posts[i].smallDesc %>...</p>
+        </div>
+        <div class="btnBlog">
+          <a href="/posts/<%= posts[i].slug %>">Read More</a>
+        </div>
+        <% if(userIN){ %>
+        <div class="btnBlog">
+          <a
+            href="/posts/<%= posts[i].slug %>?_method=DELETE"
+            data-toggle="modal"
+            data-target="#updatePost<%= posts[i]._id %>"
+            >Update</a
+          >
+        </div>
+        <div class="btnBlog">
+          <a
+            href="/posts/<%= posts[i].slug %>?_method=DELETE"
+            onclick="return confirm('ARE YOU SURE ?')"
+            >DELETE</a
+          >
+        </div>
+        <% } %>
+      </div>
+
+      <!-- UPDATE Modal -->
+      <% if(userIN){ %>
+      <div
+        class="modal fade"
+        id="updatePost<%= posts[i]._id %>"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myModalLabel"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered modal-lg"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-body customer-box">
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="Login">
+                  <form
+                    method="POST"
+                    action="/posts/<%= posts[i].slug %>?_method=PUT"
+                    class="form-horizontal"
+                  >
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <label>Post Title</label>
+                        <input
+                          type="text"
+                          name="title"
+                          value="<%= posts[i].title %>"
+                          class="form-control"
+                          placeholder="Post Title"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <label>Post Description</label>
+                        <textarea
+                          rows="8"
+                          name="desc"
+                          class="form-control"
+                          placeholder="Post Description"
+                          required
+                        >
+<%= posts[i].desc %></textarea
+                        >
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <label>Post Small Description</label>
+                        <textarea
+                          rows="8"
+                          name="smallDesc"
+                          class="form-control"
+                          placeholder="Post Description"
+                          required
+                        >
+<%= posts[i].smallDesc %></textarea
+                        >
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-10">
+                        <button
+                          type="submit"
+                          class="btn btn-light btn-radius btn-brd grd1"
+                        >
+                          Submit
+                        </button>
+                        <button
+                          type="submit"
+                          class="btn btn-light btn-radius btn-brd grd1"
+                          data-dismiss="modal"
+                          aria-hidden="true"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %> <% } %>
+    </div>
+
+    <!-- end about section -->
+
+    <!-- footer section -->
+    <%- include('partials/_footer'); %>
+    <!-- footer section -->
+    <!-- jQuery -->
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="/js/bootstrap.js"></script>
+    <!-- custom js -->
+    <script src="/js/custom.js"></script>
+    <script>
+      myInterval = setInterval(setText, 4000);
+
+      function setText() {
+        let x = document.querySelector("#online");
+        x.innerHTML = x.innerHTML == "CALL US" ? "+20 100 588 5855" : "CALL US";
+      }
+    </script>
+  </body>
+</html>

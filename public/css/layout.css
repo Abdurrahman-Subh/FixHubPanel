@@ -1,0 +1,88 @@
+.welcomeH1 {
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+}
+.welcomeH1 h1 {
+  font-weight: 700;
+}
+.blog {
+  background-color: #f0f0f0;
+}
+.containerBlog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 80px;
+  margin: auto;
+}
+.cardBlog {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  margin: auto;
+}
+.contentBlogH1 {
+  padding: 20px 50px 0 20px;
+}
+.contentBlogP {
+  padding: 20px 50px 0 20px;
+}
+.imgBlog img {
+  width: 100%;
+  border-radius: 10px;
+}
+.btnBlog {
+  padding: 20px;
+}
+.btnBlog a {
+  display: inline-block;
+  padding: 5px 25px;
+  background-color: #e43820;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #e43820;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin: 5px;
+}
+.btnBlog a:hover {
+  background-color: #c2311e;
+  color: #000;
+}
+.blog .heading_center {
+  padding: 50px;
+}
+.center {
+  text-align: center;
+  padding: 50px;
+}
+@media (max-width: 1268px) {
+  .containerBlog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 968px) {
+  .containerBlog {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+  .cardBlog {
+    width: 100%;
+  }
+  .contentBlogH1 {
+    padding: 9px;
+  }
+  .contentBlogH1 h2 {
+    padding: 9px;
+    font-size: 1.4rem;
+  }
+  .contentBlogP {
+    padding: 9px;
+  }
+}
+@media (max-width: 400px) {
+  .containerBlog {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
